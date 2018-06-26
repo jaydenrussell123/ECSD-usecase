@@ -1,0 +1,27 @@
+
+1)
+  run as ./usefile.py /tmp
+
+2)
+  get the /tmp param in py
+
+3)
+  list files in folder of
+
+4)
+  save the list of files
+
+5)
+  loop list  and filter
+
+6)
+make a list of correct format
+
+7)
+put it in numerical order
+
+8)
+make a list of incorrect format
+
+9)
+print lists
