@@ -13,20 +13,28 @@ def greater(a, b):
 #removes leading 0 from numbers for better comparison
 def stripzeroes(num):
     if (len(num)>1):
-        if num[0]=='0':
-            #keeping everything on and past key 1
-            num=num[1:]
+        j=0
+        for i in num:
+            if i=='0':
+                j+=1
+        #keeping everything on and past key 1
+        num=num[j:]
     return num
 
-# print("no of arguments:")
-# print(len(sys.argv))
+#checking amount of arguments
+if (len(sys.argv)<2):
+    print '\nError, invalid number of arguments! Run with an argument of directory.'
+    sys.exit()
 
 #Get directory arguments
 dir = sys.argv[1]
-print "\nThe directory is: ",dir
-
-print "\nThe following files are in the directory: "
 files=os.listdir(dir)
+print "\nThe directory is: ",dir
+#check if there are files in the directory
+if (len(files)==0):
+    print '\nYou need to have files in the directory!'
+    sys.exit()
+print "\nThe following files are in the directory: "
 for file in files:
     print(file)
 
